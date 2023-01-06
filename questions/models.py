@@ -5,4 +5,4 @@ from django.db import models
 class Question(models.Model):
     title_text = models.CharField(max_length=300)
     question_text = models.TextField()
-    pub_date = models.DateTimeField('date published')
+    pub_date = models.DateTimeField('date published', auto_now_add=True)

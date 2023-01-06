@@ -1,7 +1,7 @@
-from django.shortcuts import render
+from questions.models import Question
+from questions.serializers import QuestionSerializer
+from rest_framework import viewsets
 
-from django.http import HttpResponse
-
-
-def index(request):
-    return HttpResponse("Hello, world. You're at the questions index.")
+class QuestionViewSet(viewsets.ModelViewSet):
+    queryset = Question.objects.all()
+    serializer_class = QuestionSerializer
