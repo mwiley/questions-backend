@@ -4,4 +4,4 @@ from questions.models import Question
 class QuestionSerializer(serializers.HyperlinkedModelSerializer):
   class Meta:
     model = Question
-    fields = ('title_text', 'question_text')
+    fields = ('id', 'title_text', 'question_text')
