@@ -101,7 +101,7 @@ if "DATABASE_URL" in os.environ:
     DATABASES = {
         "default": dj_database_url.config(conn_max_age=MAX_CONN_AGE, ssl_require=True)
     }
-else
+else:
     # Use database credentials from .env otherwise
     DATABASES = {
         'default': {
